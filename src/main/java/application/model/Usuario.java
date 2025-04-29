@@ -1,5 +1,6 @@
 package application.model;
 
+import application.record.UsuarioDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,4 +24,10 @@ public class Usuario {
     private String nomeDeUsuario;
     @Column(nullable = false)
     private String senha;
+
+    public Usuario(UsuarioDTO dto) {
+        this.id = dto.id();
+        this.nomeDeUsuario = dto.nodeDeUsuario();
+        this.senha = dto.senha();
+    }
 }
