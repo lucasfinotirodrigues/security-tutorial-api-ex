@@ -1,0 +1,22 @@
+@url = https://8080-lucasfinoti-securitytut-pr3pev5fylu.ws-us118.gitpod.io
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJGQVRFQyBBUEkiLCJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NTg3NzAzM30.X0Dac6w7jm7qrwbpjL_F62m1ILzikuz8EijqIWm1HWs
+
+GET {{url}}/opcoes
+Authorization: Bearer {{token}}
+
+###
+GET {{url}}/opcoes/1
+Authorization: Bearer {{token}}
+
+###
+POST {{url}}/opcoes
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "texto": "Paris",
+    "correta": true,
+    "questao": {
+        "id": 1
+    }
+}
