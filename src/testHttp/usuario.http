@@ -1,0 +1,16 @@
+@url = https://8080-lucasfinoti-securitytut-pr3pev5fylu.ws-us118.gitpod.io
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJGQVRFQyBBUEkiLCJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NTk2NDgxMX0.4bes4QGK0tItC241DWhsbHEXKqlMyWpHpPbWYhPJEPg
+
+GET {{url}}/usuarios
+
+###
+
+POST {{url}}/usuarios
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "nodeDeUsuario": "teste",
+    "senha": "teste"
+}
